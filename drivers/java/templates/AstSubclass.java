@@ -6,6 +6,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 <%block name="add_imports" />
 
@@ -61,4 +63,22 @@ public ${classname} optArg(String optname, Object value) {
     % endfor
   % endif
 % endfor
+
+% for term, info in all_terms.items():
+  % if classname in info.get('include_in'):
+    % for methodname in info['methodnames']:
+      % for signature in info['signatures']:
+        % if signature['first_arg'] == classname:
+          % if 'ReqlFunction1' in [arg['type'] for arg in signature['args'][1:]]:
+    public ${info['classname']} ${methodname}(${
+            ', '.join("%s %s" % ('Expression' if arg['type'] == 'ReqlFunction1' else arg['type'], arg['var']) for arg in signature['args'][1:])}) {
+        return ${methodname}(${', '.join((("toReqlFunction1(%s)" if (arg['type'] == 'ReqlFunction1') else "%s") % arg['var']) for arg in signature['args'][1:])});
+    }
+          % endif
+        % endif
+      % endfor
+    % endfor
+  % endif
+% endfor
+
 }

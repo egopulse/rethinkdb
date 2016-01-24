@@ -10,6 +10,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 
 
@@ -133,4 +135,9 @@ public Table optArg(String optname, Object value) {
         arguments.coerceAndAdd(expr);
         return new GetNearest(arguments);
     }
+
+    public IndexCreate indexCreate(Object expr, Expression func1) {
+        return indexCreate(expr, toReqlFunction1(func1));
+    }
+
 }

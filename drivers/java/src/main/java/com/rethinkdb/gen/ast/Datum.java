@@ -10,6 +10,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 
 
@@ -29,4 +31,6 @@ public class Datum extends ReqlExpr {
         // don't contain lower ReqlAst objects.
         return datum;
     }
+
+
 }

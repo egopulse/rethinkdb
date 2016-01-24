@@ -10,6 +10,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 
 
@@ -29,5 +31,7 @@ public GetIntersecting optArg(String optname, Object value) {
     OptArgs newOptargs = OptArgs.fromMap(optargs).with(optname, value);
     return new GetIntersecting(args, newOptargs);
 }
+
+
 
 }

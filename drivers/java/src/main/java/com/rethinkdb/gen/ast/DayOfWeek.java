@@ -10,6 +10,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 
 
@@ -25,5 +27,7 @@ public class DayOfWeek extends ReqlExpr {
     public DayOfWeek(Arguments args, OptArgs optargs) {
         super(TermType.DAY_OF_WEEK, args, optargs);
     }
+
+
 
 }

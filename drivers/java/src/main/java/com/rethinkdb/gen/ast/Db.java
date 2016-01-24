@@ -10,6 +10,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 
 
@@ -65,4 +67,6 @@ public class Db extends ReqlAst {
         Arguments arguments = new Arguments(this);
         return new Info(arguments);
     }
+
+
 }

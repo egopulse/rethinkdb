@@ -1,1 +1,4 @@
-rootProject.name = "rethinkdb"
+// Seem like this property affect the way maven or bintray plugin
+// specify the upload path of pom file. The original value "rethinkdb"
+// causing a mismatch of artifact name lead to an upload error
+rootProject.name = "rethinkdb-driver"

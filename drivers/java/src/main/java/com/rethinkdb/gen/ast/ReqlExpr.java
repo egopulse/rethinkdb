@@ -10,6 +10,8 @@ import com.rethinkdb.gen.exc.ReqlDriverError;
 import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
+import com.querydsl.core.types.Expression;
+import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
 
 
 
@@ -2422,4 +2424,363 @@ public class ReqlExpr extends ReqlAst {
         Arguments arguments = new Arguments(this);
         return new Values(arguments);
     }
+
+    public OffsetsOf offsetsOf(Expression func1) {
+        return offsetsOf(toReqlFunction1(func1));
+    }
+    public Contains contains(Object exprA, Object exprB, Object exprC, Expression func1) {
+        return contains(exprA, exprB, exprC, toReqlFunction1(func1));
+    }
+    public Contains contains(Object exprA, Object exprB, Expression func1) {
+        return contains(exprA, exprB, toReqlFunction1(func1));
+    }
+    public Contains contains(Object exprA, Object exprB, Expression func1, Object exprC) {
+        return contains(exprA, exprB, toReqlFunction1(func1), exprC);
+    }
+    public Contains contains(Object exprA, Object exprB, Expression func1, Expression func1A) {
+        return contains(exprA, exprB, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Contains contains(Object exprA, Expression func1) {
+        return contains(exprA, toReqlFunction1(func1));
+    }
+    public Contains contains(Object exprA, Expression func1, Object exprB) {
+        return contains(exprA, toReqlFunction1(func1), exprB);
+    }
+    public Contains contains(Object exprA, Expression func1, Object exprB, Object exprC) {
+        return contains(exprA, toReqlFunction1(func1), exprB, exprC);
+    }
+    public Contains contains(Object exprA, Expression func1, Object exprB, Expression func1A) {
+        return contains(exprA, toReqlFunction1(func1), exprB, toReqlFunction1(func1A));
+    }
+    public Contains contains(Object exprA, Expression func1, Expression func1A) {
+        return contains(exprA, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Contains contains(Object exprA, Expression func1, Expression func1A, Object exprB) {
+        return contains(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), exprB);
+    }
+    public Contains contains(Object exprA, Expression func1, Expression func1A, Expression func1B) {
+        return contains(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Contains contains(Expression func1) {
+        return contains(toReqlFunction1(func1));
+    }
+    public Contains contains(Expression func1, Object exprA) {
+        return contains(toReqlFunction1(func1), exprA);
+    }
+    public Contains contains(Expression func1, Object exprA, Object exprB) {
+        return contains(toReqlFunction1(func1), exprA, exprB);
+    }
+    public Contains contains(Expression func1, Object exprA, Object exprB, Object exprC) {
+        return contains(toReqlFunction1(func1), exprA, exprB, exprC);
+    }
+    public Contains contains(Expression func1, Object exprA, Object exprB, Expression func1A) {
+        return contains(toReqlFunction1(func1), exprA, exprB, toReqlFunction1(func1A));
+    }
+    public Contains contains(Expression func1, Object exprA, Expression func1A) {
+        return contains(toReqlFunction1(func1), exprA, toReqlFunction1(func1A));
+    }
+    public Contains contains(Expression func1, Object exprA, Expression func1A, Object exprB) {
+        return contains(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), exprB);
+    }
+    public Contains contains(Expression func1, Object exprA, Expression func1A, Expression func1B) {
+        return contains(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Contains contains(Expression func1, Expression func1A) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Contains contains(Expression func1, Expression func1A, Object exprA) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A), exprA);
+    }
+    public Contains contains(Expression func1, Expression func1A, Object exprA, Object exprB) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, exprB);
+    }
+    public Contains contains(Expression func1, Expression func1A, Object exprA, Expression func1B) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, toReqlFunction1(func1B));
+    }
+    public Contains contains(Expression func1, Expression func1A, Expression func1B) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Contains contains(Expression func1, Expression func1A, Expression func1B, Object exprA) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), exprA);
+    }
+    public Contains contains(Expression func1, Expression func1A, Expression func1B, Expression func1C) {
+        return contains(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), toReqlFunction1(func1C));
+    }
+    public Merge merge(Object exprA, Object exprB, Object exprC, Expression func1) {
+        return merge(exprA, exprB, exprC, toReqlFunction1(func1));
+    }
+    public Merge merge(Object exprA, Object exprB, Expression func1) {
+        return merge(exprA, exprB, toReqlFunction1(func1));
+    }
+    public Merge merge(Object exprA, Object exprB, Expression func1, Object exprC) {
+        return merge(exprA, exprB, toReqlFunction1(func1), exprC);
+    }
+    public Merge merge(Object exprA, Object exprB, Expression func1, Expression func1A) {
+        return merge(exprA, exprB, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Merge merge(Object exprA, Expression func1) {
+        return merge(exprA, toReqlFunction1(func1));
+    }
+    public Merge merge(Object exprA, Expression func1, Object exprB) {
+        return merge(exprA, toReqlFunction1(func1), exprB);
+    }
+    public Merge merge(Object exprA, Expression func1, Object exprB, Object exprC) {
+        return merge(exprA, toReqlFunction1(func1), exprB, exprC);
+    }
+    public Merge merge(Object exprA, Expression func1, Object exprB, Expression func1A) {
+        return merge(exprA, toReqlFunction1(func1), exprB, toReqlFunction1(func1A));
+    }
+    public Merge merge(Object exprA, Expression func1, Expression func1A) {
+        return merge(exprA, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Merge merge(Object exprA, Expression func1, Expression func1A, Object exprB) {
+        return merge(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), exprB);
+    }
+    public Merge merge(Object exprA, Expression func1, Expression func1A, Expression func1B) {
+        return merge(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Merge merge(Expression func1) {
+        return merge(toReqlFunction1(func1));
+    }
+    public Merge merge(Expression func1, Object exprA) {
+        return merge(toReqlFunction1(func1), exprA);
+    }
+    public Merge merge(Expression func1, Object exprA, Object exprB) {
+        return merge(toReqlFunction1(func1), exprA, exprB);
+    }
+    public Merge merge(Expression func1, Object exprA, Object exprB, Object exprC) {
+        return merge(toReqlFunction1(func1), exprA, exprB, exprC);
+    }
+    public Merge merge(Expression func1, Object exprA, Object exprB, Expression func1A) {
+        return merge(toReqlFunction1(func1), exprA, exprB, toReqlFunction1(func1A));
+    }
+    public Merge merge(Expression func1, Object exprA, Expression func1A) {
+        return merge(toReqlFunction1(func1), exprA, toReqlFunction1(func1A));
+    }
+    public Merge merge(Expression func1, Object exprA, Expression func1A, Object exprB) {
+        return merge(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), exprB);
+    }
+    public Merge merge(Expression func1, Object exprA, Expression func1A, Expression func1B) {
+        return merge(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Merge merge(Expression func1, Expression func1A) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Merge merge(Expression func1, Expression func1A, Object exprA) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A), exprA);
+    }
+    public Merge merge(Expression func1, Expression func1A, Object exprA, Object exprB) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, exprB);
+    }
+    public Merge merge(Expression func1, Expression func1A, Object exprA, Expression func1B) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, toReqlFunction1(func1B));
+    }
+    public Merge merge(Expression func1, Expression func1A, Expression func1B) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Merge merge(Expression func1, Expression func1A, Expression func1B, Object exprA) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), exprA);
+    }
+    public Merge merge(Expression func1, Expression func1A, Expression func1B, Expression func1C) {
+        return merge(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), toReqlFunction1(func1C));
+    }
+    public Map map(Expression func1) {
+        return map(toReqlFunction1(func1));
+    }
+    public Filter filter(Expression func1) {
+        return filter(toReqlFunction1(func1));
+    }
+    public ConcatMap concatMap(Expression func1) {
+        return concatMap(toReqlFunction1(func1));
+    }
+    public OrderBy orderBy(Object exprA, Object exprB, Object exprC, Expression func1) {
+        return orderBy(exprA, exprB, exprC, toReqlFunction1(func1));
+    }
+    public OrderBy orderBy(Object exprA, Object exprB, Expression func1) {
+        return orderBy(exprA, exprB, toReqlFunction1(func1));
+    }
+    public OrderBy orderBy(Object exprA, Object exprB, Expression func1, Object exprC) {
+        return orderBy(exprA, exprB, toReqlFunction1(func1), exprC);
+    }
+    public OrderBy orderBy(Object exprA, Object exprB, Expression func1, Expression func1A) {
+        return orderBy(exprA, exprB, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public OrderBy orderBy(Object exprA, Expression func1) {
+        return orderBy(exprA, toReqlFunction1(func1));
+    }
+    public OrderBy orderBy(Object exprA, Expression func1, Object exprB) {
+        return orderBy(exprA, toReqlFunction1(func1), exprB);
+    }
+    public OrderBy orderBy(Object exprA, Expression func1, Object exprB, Object exprC) {
+        return orderBy(exprA, toReqlFunction1(func1), exprB, exprC);
+    }
+    public OrderBy orderBy(Object exprA, Expression func1, Object exprB, Expression func1A) {
+        return orderBy(exprA, toReqlFunction1(func1), exprB, toReqlFunction1(func1A));
+    }
+    public OrderBy orderBy(Object exprA, Expression func1, Expression func1A) {
+        return orderBy(exprA, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public OrderBy orderBy(Object exprA, Expression func1, Expression func1A, Object exprB) {
+        return orderBy(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), exprB);
+    }
+    public OrderBy orderBy(Object exprA, Expression func1, Expression func1A, Expression func1B) {
+        return orderBy(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public OrderBy orderBy(Expression func1) {
+        return orderBy(toReqlFunction1(func1));
+    }
+    public OrderBy orderBy(Expression func1, Object exprA) {
+        return orderBy(toReqlFunction1(func1), exprA);
+    }
+    public OrderBy orderBy(Expression func1, Object exprA, Object exprB) {
+        return orderBy(toReqlFunction1(func1), exprA, exprB);
+    }
+    public OrderBy orderBy(Expression func1, Object exprA, Object exprB, Object exprC) {
+        return orderBy(toReqlFunction1(func1), exprA, exprB, exprC);
+    }
+    public OrderBy orderBy(Expression func1, Object exprA, Object exprB, Expression func1A) {
+        return orderBy(toReqlFunction1(func1), exprA, exprB, toReqlFunction1(func1A));
+    }
+    public OrderBy orderBy(Expression func1, Object exprA, Expression func1A) {
+        return orderBy(toReqlFunction1(func1), exprA, toReqlFunction1(func1A));
+    }
+    public OrderBy orderBy(Expression func1, Object exprA, Expression func1A, Object exprB) {
+        return orderBy(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), exprB);
+    }
+    public OrderBy orderBy(Expression func1, Object exprA, Expression func1A, Expression func1B) {
+        return orderBy(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A, Object exprA) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A), exprA);
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A, Object exprA, Object exprB) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, exprB);
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A, Object exprA, Expression func1B) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, toReqlFunction1(func1B));
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A, Expression func1B) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A, Expression func1B, Object exprA) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), exprA);
+    }
+    public OrderBy orderBy(Expression func1, Expression func1A, Expression func1B, Expression func1C) {
+        return orderBy(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), toReqlFunction1(func1C));
+    }
+    public Count count(Expression func1) {
+        return count(toReqlFunction1(func1));
+    }
+    public EqJoin eqJoin(Expression func1, Object exprA) {
+        return eqJoin(toReqlFunction1(func1), exprA);
+    }
+    public Update update(Expression func1) {
+        return update(toReqlFunction1(func1));
+    }
+    public Replace replace(Expression func1) {
+        return replace(toReqlFunction1(func1));
+    }
+    public Funcall do_(Expression func1) {
+        return do_(toReqlFunction1(func1));
+    }
+    public ForEach forEach(Expression func1) {
+        return forEach(toReqlFunction1(func1));
+    }
+    public Default default_(Expression func1) {
+        return default_(toReqlFunction1(func1));
+    }
+    public Group group(Object exprA, Object exprB, Object exprC, Expression func1) {
+        return group(exprA, exprB, exprC, toReqlFunction1(func1));
+    }
+    public Group group(Object exprA, Object exprB, Expression func1) {
+        return group(exprA, exprB, toReqlFunction1(func1));
+    }
+    public Group group(Object exprA, Object exprB, Expression func1, Object exprC) {
+        return group(exprA, exprB, toReqlFunction1(func1), exprC);
+    }
+    public Group group(Object exprA, Object exprB, Expression func1, Expression func1A) {
+        return group(exprA, exprB, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Group group(Object exprA, Expression func1) {
+        return group(exprA, toReqlFunction1(func1));
+    }
+    public Group group(Object exprA, Expression func1, Object exprB) {
+        return group(exprA, toReqlFunction1(func1), exprB);
+    }
+    public Group group(Object exprA, Expression func1, Object exprB, Object exprC) {
+        return group(exprA, toReqlFunction1(func1), exprB, exprC);
+    }
+    public Group group(Object exprA, Expression func1, Object exprB, Expression func1A) {
+        return group(exprA, toReqlFunction1(func1), exprB, toReqlFunction1(func1A));
+    }
+    public Group group(Object exprA, Expression func1, Expression func1A) {
+        return group(exprA, toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Group group(Object exprA, Expression func1, Expression func1A, Object exprB) {
+        return group(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), exprB);
+    }
+    public Group group(Object exprA, Expression func1, Expression func1A, Expression func1B) {
+        return group(exprA, toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Group group(Expression func1) {
+        return group(toReqlFunction1(func1));
+    }
+    public Group group(Expression func1, Object exprA) {
+        return group(toReqlFunction1(func1), exprA);
+    }
+    public Group group(Expression func1, Object exprA, Object exprB) {
+        return group(toReqlFunction1(func1), exprA, exprB);
+    }
+    public Group group(Expression func1, Object exprA, Object exprB, Object exprC) {
+        return group(toReqlFunction1(func1), exprA, exprB, exprC);
+    }
+    public Group group(Expression func1, Object exprA, Object exprB, Expression func1A) {
+        return group(toReqlFunction1(func1), exprA, exprB, toReqlFunction1(func1A));
+    }
+    public Group group(Expression func1, Object exprA, Expression func1A) {
+        return group(toReqlFunction1(func1), exprA, toReqlFunction1(func1A));
+    }
+    public Group group(Expression func1, Object exprA, Expression func1A, Object exprB) {
+        return group(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), exprB);
+    }
+    public Group group(Expression func1, Object exprA, Expression func1A, Expression func1B) {
+        return group(toReqlFunction1(func1), exprA, toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Group group(Expression func1, Expression func1A) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A));
+    }
+    public Group group(Expression func1, Expression func1A, Object exprA) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A), exprA);
+    }
+    public Group group(Expression func1, Expression func1A, Object exprA, Object exprB) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, exprB);
+    }
+    public Group group(Expression func1, Expression func1A, Object exprA, Expression func1B) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A), exprA, toReqlFunction1(func1B));
+    }
+    public Group group(Expression func1, Expression func1A, Expression func1B) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B));
+    }
+    public Group group(Expression func1, Expression func1A, Expression func1B, Object exprA) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), exprA);
+    }
+    public Group group(Expression func1, Expression func1A, Expression func1B, Expression func1C) {
+        return group(toReqlFunction1(func1), toReqlFunction1(func1A), toReqlFunction1(func1B), toReqlFunction1(func1C));
+    }
+    public Sum sum(Expression func1) {
+        return sum(toReqlFunction1(func1));
+    }
+    public Avg avg(Expression func1) {
+        return avg(toReqlFunction1(func1));
+    }
+    public Min min(Expression func1) {
+        return min(toReqlFunction1(func1));
+    }
+    public Max max(Expression func1) {
+        return max(toReqlFunction1(func1));
+    }
+
 }
