@@ -1,4 +1,4 @@
-package com.egopulse;
+package com.egopulse.rethinkdb;
 
 import com.querydsl.core.types.*;
 import com.rethinkdb.RethinkDB;

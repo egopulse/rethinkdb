@@ -11,7 +11,7 @@ import com.rethinkdb.model.Arguments;
 import com.rethinkdb.model.OptArgs;
 import com.rethinkdb.ast.ReqlAst;
 import com.querydsl.core.types.Expression;
-import static com.egopulse.RethinkDBSerializer.toReqlFunction1;
+import static com.egopulse.rethinkdb.RethinkDBSerializer.toReqlFunction1;
 
 
 import com.rethinkdb.model.ReqlLambda;

@@ -56,7 +56,8 @@ dependencies {
     testCompile "junit:junit:4.12"
     compile 'org.slf4j:slf4j-api:1.7.12'
     compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-    compile "com.querydsl:querydsl-core:4.0.7"
+    compile 'com.querydsl:querydsl-core:4.0.7'
+    compile 'com.querydsl:querydsl-apt:4.0.7'
 }
 
 test {
